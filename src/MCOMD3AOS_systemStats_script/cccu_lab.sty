@@ -1,0 +1,125 @@
+\ProvidesPackage{cccu_lab}
+%% Essential packages and settings
+\RequirePackage[a4paper,bottom=1in]{geometry}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
+\RequirePackage[dvipsnames,table]{xcolor}
+\RequirePackage[british]{babel}
+\RequirePackage{lexend}
+\RequirePackage{soul}
+\RequirePackage{amsmath}
+\RequirePackage{parskip}
+\RequirePackage{float}
+\RequirePackage[langlinenos=true]{minted}
+\RequirePackage[ampersand]{easylist}
+\RequirePackage{lastpage}
+\RequirePackage[iso]{datetime}
+\RequirePackage{booktabs}
+\RequirePackage{graphicx}
+\RequirePackage{tabularx}    
+\graphicspath{ {images/} }
+\RequirePackage{framed}
+\colorlet{shadecolor}{gray!10}
+\RequirePackage{fontawesome}
+\RequirePackage{fancyhdr}
+\RequirePackage{enumitem,amssymb}
+\RequirePackage[normalem]{ulem} 
+\RequirePackage{quoting}
+\RequirePackage{tabularx}
+\RequirePackage{threeparttable}
+\RequirePackage{multicol}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{Page \thepage\ of \pageref{LastPage}}
+\RequirePackage[hidelinks]{hyperref}
+\RequirePackage[os=win]{menukeys}
+%\hypersetup{colorlinks=false}
+\RequirePackage[noabbrev,capitalise]{cleveref}
+\definecolor{ghostwhite}{rgb}{1.0,0.99,1.0}
+\RequirePackage[pagecolor={ghostwhite},nopagecolor={white}]{pagecolor}
+
+%% Create macros for modulecode, course, and labtitle
+
+%% If error detection is wanted (i.e., No foo given) use this instead:
+%\newcommand\foo[1]{\renewcommand\@foo{#1}}
+%\newcommand\@foo{\@latex@error{No \noexpand\foo given}\@ehc}
+
+% Define Module Code macro
+\newcommand\modulecode[1]{\renewcommand\@modulecode{#1}}
+\newcommand\@modulecode{}
+
+% Define Course macro
+\newcommand{\course}[1]{\renewcommand\@course{#1}}
+\newcommand\@course{}
+
+% Define Lab Title macro
+\newcommand{\labtitle}[1]{\renewcommand\@labtitle{#1}}
+\newcommand\@labtitle{}
+
+%% Additional 
+% margins width
+\geometry{left=20mm,
+ right=20mm,top=20mm}
+
+% inline code highlighting
+\definecolor{lightgray}{gray}{0.95}
+\DeclareRobustCommand{\code}[1]{{\sethlcolor{lightgray}\texttt{\hl{#1}}}}
+\soulregister{\code}{1}
+\makeatletter
+\pdfstringdefDisableCommands{\let\code\@firstofone}
+\makeatother
+
+% vertical lines for columns in a matrixs 
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+
+\AtBeginEnvironment{minted}{%
+  \renewcommand{\fcolorbox}[4][]{#4}}
+  
+\renewcommand\theFancyVerbLine{\large\arabic{FancyVerbLine}}
+
+\gdef\unit#1{\mathord{\thinspace\mathrm{#1}}}%
+
+% tick boxes 
+\newlist{todolist}{itemize}{2}
+\setlist[todolist]{label=$\square$}
+
+%% colors for links
+\hypersetup{pdfpagemode={UseOutlines},
+bookmarksopen=true,
+bookmarksopenlevel=0,
+hypertexnames=false,
+colorlinks=true,% Set to false to disable coloring links
+citecolor=[RGB]{48,79,254},% The color of citations
+linkcolor=[RGB]{35,50,137},% The color of references to document elements (sections, figures, etc)
+urlcolor=[RGB]{35,50,137},% The color of hyperlinks (URLs)
+pdfstartview={FitV},
+unicode,
+breaklinks=true,
+}
+
+% Strike through
+\newcommand{\stkout}[1]{\ifmmode\text{\sout{\ensuremath{#1}}}\else\sout{#1}\fi}
+
+% base10 
+\newcommand{\baseten}{\textsubscript{10}}
+% base2 
+\newcommand{\basetwo}{\textsubscript{2}}
+% base2 
+\newcommand{\basesixteen}{\textsubscript{16}}
+% power
+\newcommand{\power}[1]{\textsuperscript{#1}}
+
+\makeatletter
+\AtBeginEnvironment{minted}{\dontdofcolorbox}
+\def\dontdofcolorbox{\renewcommand\fcolorbox[4][]{##4}}
+\makeatother
+
+% Tables
+
+
+
