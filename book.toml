@@ -4,3 +4,8 @@ language = "en"
 multilingual = false
 src = "src"
 title = "AOS_Exercises"
+
+[output.html]
+additional-css = ["ferris.css", "theme/2018-edition.css"]
+additional-js = ["ferris.js"]
+git-repository-url = "https://github.com/cccu-uk/MCOMD3AOS_Exercise
