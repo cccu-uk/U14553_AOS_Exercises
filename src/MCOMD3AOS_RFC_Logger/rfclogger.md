@@ -1,7 +1,6 @@
 # Introduction 
 
-In this lab you will implement the Internet Engineering Taskforce RFC
-5424 standard for syslog using ```bash```.
+In this lab you will implement the Internet Engineering Taskforce RFC 5424 standard for syslog using ```bash```. You can just blind copy the code and place them in descending order into your script, but remember to read around each code block so you understand it.
 
 > **NOTICE**
 >
@@ -47,7 +46,7 @@ This may be the first time you have seen `set`, a *builtin*. Essentially, lets y
 
 # Configurables
 
-A quick reminder here that `` is a comment for one line. This bit is essential for running the script but it may help if you come to revisit at a later date.
+A quick reminder here that `#` is a comment for one line. This bit is essential for running the script but it may help if you come to revisit at a later date.
 
 ```bash
 #--------------------------------------------------------------------------------------------------
@@ -233,6 +232,7 @@ LOG_LEVEL_VALUE() {
 Only thing really to point out here is that `-z` checks to see if something is of length **zero**. The function `isset` checks checks whether a variable is set, which means that it has to be declared and is **not** NULL. Therefore, we can set value by default to `LOG_LEVELS` if the current `level` variable is NULL.
 
 ![image](images/log_level_val.PNG)
+
 Again output shown when called with ```bash -x```
 
 Next you are going to create function that gets the log name from the supplied numeric value.
