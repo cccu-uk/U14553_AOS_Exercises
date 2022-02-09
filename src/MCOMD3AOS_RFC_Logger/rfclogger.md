@@ -344,16 +344,17 @@ So we have four functions left...
 Continuing with the handler theme, the next function is the `LOG_HANDLER_TERM`, essentially the same as the the `LOG_HANDLER_COLORTERM` but without the colour!
 
 ```bash
-# Appends a log to the configured logfile
-# Usage: LOG_HANDLER_LOGFILE <log level> <log message>
-# Eg: LOG_HANDLER_LOGFILE NOTICE "My critical log"
-LOG_HANDLER_LOGFILE() {
+# Outputs a log to the stdout, without color
+# Usage: LOG_HANDLER_TERM <log level> <log message>
+# Eg: LOG_HANDLER_TERM CRITICAL "My critical log"
+LOG_HANDLER_TERM() {
     local level="$1"
+    local level_value="$(LOG_LEVEL_VALUE "$level")"
     local log="$2"
-    local log_path="$(dirname "$LOGFILE")"
-    [ -d "$log_path" ] || mkdir -p "$log_path"
-    echo "$log" >> "$LOGFILE"
-    LOG_ROTATION
+
+    [ "${LOG_LEVEL}" -eq "${LOG_LEVELS[OFF]}" ] && return 0
+    [ "${level_value}" -gt "$LOG_LEVEL" ] && return 0
+    echo -e "$log"
 }
 ```
 
