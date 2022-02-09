@@ -60,10 +60,10 @@ To do this we need to write the following code:
 ```bash
 # Display help message
 USAGE(){
-  echo-e $1
-  echo-e "\nUsage: systemStats [-c cores] [-D diskspace] [-i ipv4 address]"
-  echo-e "\t\t   [-u cpu usage] [-v version]"
-  echo-e "\t\t   more information see man systemStats"
+  echo -e $1
+  echo -e "\nUsage: systemStats [-c cores] [-D diskspace] [-i ipv4 address]"
+  echo -e "\t\t   [-u cpu usage] [-v version]"
+  echo -e "\t\t   more information see man systemStats"
 }
 ```
 
