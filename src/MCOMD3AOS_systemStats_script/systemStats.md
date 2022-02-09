@@ -146,7 +146,7 @@ i) IP=$(hostname -I)
 u) CPU_USAGE=$(grep -w 'cpu' /proc/stat | awk '{(usage=($2+$3+$4+$6+$7+$8)*100/($2+$3+$4+$5+$6+$7+$8))}
                       {free=($5)*100/($2+$3+$4+$5+$6+$7+$8)}
                       END {printf " Used CPU: %.2f%%",usage}
-                          {printf " Free CPU: %.2f%%",free}'
+                          {printf " Free CPU: %.2f%%",free}')
    echo-e ${CPU_USAGE};;
 v) echo-e "systemStats:\n\t\tVersion:${VERSION} Released:${RELEASED} Author:${AUTHOR}";;
 *) USAGE "Option not recognised"
