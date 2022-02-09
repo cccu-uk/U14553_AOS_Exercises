@@ -139,10 +139,10 @@ case ${OPTION}
 in
 c) CORES=$(cat /sys/devices/system/cpu/present)
    echo"Cores="${CORES};;
-D) DISKSPACES=$(df -H  | grep -w'overlay'| awk'{print "Total: "$2 " Used: "$3 " Avail: "$4}')
-   echo-e "Disk Info="${DISKSPACES};;
+D) DISKSPACES=$(df -H  | grep -w 'overlay'| awk '{print "Total: "$2 " Used: "$3 " Avail: "$4}')
+   echo -e "Disk Info="${DISKSPACES};;
 i) IP=$(hostname -I)
-   echo"Host IP="${IP};;
+   echo "Host IP="${IP};;
 u) CPU_USAGE=$(grep -w 'cpu' /proc/stat | awk '{(usage=($2+$3+$4+$6+$7+$8)*100/($2+$3+$4+$5+$6+$7+$8))}
                       {free=($5)*100/($2+$3+$4+$5+$6+$7+$8)}
                       END {printf " Used CPU: %.2f%%",usage}
