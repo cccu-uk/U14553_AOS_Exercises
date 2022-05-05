@@ -50,9 +50,9 @@ In case you've made a typo, run ``pkill wpa_supplicant`` and start over.
 To benefit from updates and bug fixes from the vendor, we will start by updating Raspberry Pi firmware:
 
 ```bash
-	$ nix-shell -p raspberrypi-eeprom
-	$ mount /dev/disk/by-label/FIRMWARE /mnt
-	$ BOOTFS=/mnt FIRMWARE_RELEASE_STATUS=stable rpi-eeprom-update -d  
+$ nix-shell -p raspberrypi-eeprom
+$ mount /dev/disk/by-label/FIRMWARE /mnt
+$ BOOTFS=/mnt FIRMWARE_RELEASE_STATUS=stable rpi-eeprom-update -d  
 ```
 
 ## Installing NixOS
@@ -64,7 +64,7 @@ The script below is below is a configuration file, remember that NixOS is a deca
 Using you the ``nano`` text editor you enter the following command as ``su``... ``nano /etc/nixos/configuration.nix`` 
 
 ```nix 
-	 {config, pkgs, lib, ... }:
+{config, pkgs, lib, ... }:
 
 let
   user = "guest";
@@ -122,7 +122,7 @@ in {
 Of course if you have already read past the configuration above then you could always save some much needed time and do this in the terminal as ``su``:
 
 ```bash
-	$ curl -L https://tinyurl.com/nixos-rpi4-tutorial > /etc/nixos/configuration.nix
+$ curl -L https://tinyurl.com/nixos-rpi4-tutorial > /etc/nixos/configuration.nix
 ```
 
 At the top of ``/etc/nixos/configuration.nix`` there are a few variables that you want to configure, most important being your wifi connection details, this time specified in declarative way.
@@ -130,15 +130,47 @@ At the top of ``/etc/nixos/configuration.nix`` there are a few variables that yo
 Once you're ready to deploy your first configuration file:
 
 ```bash
-	$ nixos-install --root /
-	$ reboot
+$ nixos-install --root /
+$ reboot
 ```
 
 ## Making Changes
 
 It booted, congratulations!
 
-To make further changes to the configuration, search through [NixOS options](https://search.nixos.org/options), edit ``/etc/nixos/configuration.nix`` and update your system:
+To make further changes to the configuration, search through [NixOS options](https://search.nixos.org/options), edit ``/etc/nixos/configuration.nix`` and update your system.
+
+However, we are going to make some changes to the configuration file now and redeploy. Re-open ``/etc/nixos/configuration.nix``. We need to change the keymapping, locale and dateTime, navigate to the line above ``networking = {`` and add the following configuration:
+
+```nix
+time.timeZone = "Europe/London";
+```
+Then find the line ``services.openssh.enable = true;`` and creat a new line underneath and enter the following:
+
+```nix
+i18n.defaultLocale = "en_GB.UTF-8";
+console = {
+	font = "Lat2-Terminus16";
+	keyMap = "uk";
+};
+```
+
+Next we are going to declaratively set the CPU governor, navigate to where the script has the line ``hardware.raspberry.pi."4".fkms-3d.enable = true;`` and create a new line and enter the following:
+
+```nix
+powerManagement.cpuFreqGovernor = "powersave";
+```
+
+Next modify the services.xserver to look like this:
+
+```nix
+services.xserver ={
+	enable = true;
+	layout = "gb";
+};
+``` 
+Now write out so we can redeploy our script live.
+
 
 ```bash
 	$ sudo -i
