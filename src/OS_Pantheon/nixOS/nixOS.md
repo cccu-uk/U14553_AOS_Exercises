@@ -171,8 +171,90 @@ services.xserver ={
 ``` 
 Now write out so we can redeploy our script live.
 
+```bash
+$ sudo -i
+$ nixos-rebuild switch
+$ reboot
+```
+
+Once rebooted you will be presented with several bootable generations, default is which ever generation is set as default (We will revisit this shortly). From here it is possible to role back or leap forward to the latest configuration. This is a really powerful feature of NixOS.
+
+Now let's try something else. 
+
+Again let's open the configuration file again, make sure you are root.
+
+We are going to change the displayManager and the desktopManager, navigate to the ``services.xserver ={`` line and modify:
+
+```nix
+services.xserver = {
+	enable = true;
+	layout = "gb";
+	#displayManager.lightdm.enable = true;
+	displayManager.sddm.enable = true;
+	#desktopManager.xfce.enable = false;
+	desktopManager.plasma5.enable = true;
+```
+
+Write out and enter redeploy and reboot with the following command:
 
 ```bash
-	$ sudo -i
-  $ nixos-rebuild switch
+$ sudo nixos-rebuild switch && reboot
 ```
+
+or if root already remove the ``sudo`` command.
+
+Once rebooted and you should see a the ``sddm`` login screen instead of ``lightdm`` and the ``plasma5`` desktop environment instead of ``xfce``.
+
+Lets try another...
+
+```nix
+services.xserver = {
+	enable = true;
+	layout = "gb";
+	#displayManager.lightdm.enable = true;
+	#displayManager.sddm.enable = true;
+	displayManager.xpra.enable = true;
+	#desktopManager.xfce.enable = false;
+	#desktopManager.plasma5.enable = true;
+	desktopManager.lumina.enable = true;
+```
+
+Write out and enter redeploy and reboot with the following command:
+
+```bash
+$ sudo nixos-rebuild switch && reboot
+```
+
+or if root already remove the ``sudo`` command.
+
+Now we should have a new display and desktop manager, how fun, however what you should be noticing is an increase in configurations... these take up space on the system and we should clear those we don't want, but not yet.
+
+If you open the terminal and run this command you should see a list of configurations files, notice that the lastest is current set to (current) this is so you know which generation you are running : 
+
+```bash
+$ sudo nix-env --list-generations --profile /nix/var/nix/profiles/system
+```
+
+Ok we are now going to modify the environment imperatively.
+
+Using the following command:
+
+```sh
+$ nix-env -iA nixos.bat
+```
+
+``bat`` is a  ``cat`` clone with syntax highlighting and git integration including beautification.
+
+Once installed, do this ``bat /etc/os-release`` and do the same with ``cat`` see the difference? Now because we did this imperatively if we took the configuration file to a new system or needed to rebuild from scratch this system, these two new packages would not be included. So to make a modification to the configuration file. Naviagate to the ``environment.systemPackages = with pkgs; [ vim ];``, lets get some more packages: 
+
+```nix
+environment.systemPackages = with pkgs; [ vim git bat vscodium neofetch ];
+```
+
+Write out and enter redeploy and reboot with the following command:
+
+```bash
+$ sudo nixos-rebuild  && reboot
+```
+
+or if root already remove the ``sudo`` command.
