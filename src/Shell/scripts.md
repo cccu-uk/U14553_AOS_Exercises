@@ -484,7 +484,6 @@ $ bash longest.sh shell-lesson-data/writing/data txt
 <summary><b>Click for Solution</b></summary>
 <p></p>
 
-## Solution
 ```sh
 # Shell script which takes two arguments:
 #    1. a directory name
@@ -502,95 +501,91 @@ With `wc -l $1/*.$2 | sort -n | tail -n 1` we'll see the final summary line: we 
 
 ---
 
-> ## Script Reading Comprehension
->
-> For this question, consider the `shell-lesson-data/exercise-data/proteins` directory once again.
-> This contains a number of `.pdb` files in addition to any other files you
-> may have created.
-> Explain what each of the following three scripts would do when run as
-> `bash script1.sh *.pdb`, `bash script2.sh *.pdb`, and `bash script3.sh *.pdb` respectively.
->
-> ~~~
-> # Script 1
-> echo *.*
-> ~~~
-> {: .language-bash}
->
-> ~~~
-> # Script 2
-> for filename in $1 $2 $3
-> do
->     cat $filename
-> done
-> ~~~
-> {: .language-bash}
->
-> ~~~
-> # Script 3
-> echo $@.pdb
-> ~~~
-> {: .language-bash}
->
-> > ## Solutions
-> > In each case, the shell expands the wildcard in `*.pdb` before passing the resulting
-> > list of file names as arguments to the script.
-> >
-> > Script 1 would print out a list of all files containing a dot in their name.
-> > The arguments passed to the script are not actually used anywhere in the script.
-> >
-> > Script 2 would print the contents of the first 3 files with a `.pdb` file extension.
-> > `$1`, `$2`, and `$3` refer to the first, second, and third argument respectively.
-> >
-> > Script 3 would print all the arguments to the script (i.e. all the `.pdb` files),
-> > followed by `.pdb`.
-> > `$@` refers to *all* the arguments given to a shell script.
-> > ```
-> > cubane.pdb ethane.pdb methane.pdb octane.pdb pentane.pdb propane.pdb.pdb
-> > ```
-> > {: .output}
-> {: .solution}
-{: .challenge}
+## Script Reading Comprehension
+For this question, consider the `shell-lesson-data/exercise-data/proteins` directory once again. This contains a number of `.pdb` files in addition to any other files you may have created.
 
-> ## Debugging Scripts
->
-> Suppose you have saved the following script in a file called `do-errors.sh`
-> in Nelle's `north-pacific-gyre/scripts` directory:
->
-> ~~~
-> # Calculate stats for data files.
-> for datafile in "$@"
-> do
->     echo $datfile
->     bash goostats.sh $datafile stats-$datafile
-> done
-> ~~~
-> {: .language-bash}
->
-> When you run it from the `north-pacific-gyre` directory:
->
-> ~~~
-> $ bash do-errors.sh NENE*A.txt NENE*B.txt
-> ~~~
-> {: .language-bash}
->
-> the output is blank.
-> To figure out why, re-run the script using the `-x` option:
->
-> ~~~
-> $ bash -x do-errors.sh NENE*A.txt NENE*B.txt
-> ~~~
-> {: .language-bash}
->
-> What is the output showing you?
-> Which line is responsible for the error?
->
-> > ## Solution
-> > The `-x` option causes `bash` to run in debug mode.
-> > This prints out each command as it is run, which will help you to locate errors.
-> > In this example, we can see that `echo` isn't printing anything. We have made a typo
-> > in the loop variable name, and the variable `datfile` doesn't exist, hence returning
-> > an empty string.
-> {: .solution}
-{: .challenge}
+Explain what each of the following three scripts would do when run as `bash script1.sh *.pdb`, `bash script2.sh *.pdb`, and `bash script3.sh *.pdb` respectively.
 
-{% include links.md %}
+```sh
+# Script 1
+echo *.*
+```
+...
+```sh
+# Script 2
+for filename in $1 $2 $3
+do
+    cat $filename
+done
+```
+...
+```sh
+# Script 3
+echo $@.pdb
+```
+
+---
+<details>
+<summary><b>Click for Solution</b></summary>
+<p></p>
+
+## Solutions
+In each case, the shell expands the wildcard in `*.pdb` before passing the resulting list of file names as arguments to the script.
+
+- Script 1 would print out a list of all files containing a dot in their name.
+  - The arguments passed to the script are not actually used anywhere in the script.
+>>
+- Script 2 would print the contents of the first 3 files with a `.pdb` file extension.
+  - `$1`, `$2`, and `$3` refer to the first, second, and third argument respectively.
+>>
+- Script 3 would print all the arguments to the script (i.e. all the `.pdb` files), followed by `.pdb`.
+  - `$@` refers to *all* the arguments given to a shell script.
+```sh
+cubane.pdb ethane.pdb methane.pdb octane.pdb pentane.pdb propane.pdb.pdb
+```
+</details>
+
+---
+
+## Debugging Scripts
+Suppose you have saved the following script in a file called `do-errors.sh` in Nelle's `north-pacific-gyre/scripts` directory:
+
+```sh
+# Calculate stats for data files.
+for datafile in "$@"
+do
+    echo $datfile
+    bash goostats.sh $datafile stats-$datafile
+done
+```
+
+When you run it from the `north-pacific-gyre` directory:
+```sh
+$ bash do-errors.sh NENE*A.txt NENE*B.txt
+```
+
+...the output is blank.
+
+To figure out why, re-run the script using the `-x` option:
+
+```sh
+$ bash -x do-errors.sh NENE*A.txt NENE*B.txt
+```
+
+1. What is the output showing you?
+2. Which line is responsible for the error?
+
+---
+<details>
+<summary><b>Click for Solution</b></summary>
+<p></p>
+
+The `-x` option causes `bash` to run in debug mode. This prints out each command as it is run, which will help you to locate errors.
+
+In this example, we can see that `echo` isn't printing anything. We have made a typo in the loop variable name, and the variable `datfile` doesn't exist, hence returning an empty string.
+
+</details>
+
+---
+
+[Back to Contents Page](shell.md)

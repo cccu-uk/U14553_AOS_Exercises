@@ -717,4 +717,4 @@ This is called **tab completion**, and we will see it in many other tools as we 
 
 [Arguments](https://swcarpentry.github.io/shell-novice/reference.html#argument)
 
-{% include links.md %}
+[Back to Contents Page](shell.md)

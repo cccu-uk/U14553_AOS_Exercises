@@ -103,7 +103,6 @@ ks: command not found
 This might happen if the command was mis-typed or if the program corresponding to that command is not installed.
 
 
-
 ## Nelle's Pipeline: A Typical Problem
 
 Nelle Nemo, a marine biologist, has just returned from a six-month survey of the [North Pacific Gyre](http://en.wikipedia.org/wiki/North_Pacific_Gyre), where she has been sampling gelatinous marine life in the [Great Pacific Garbage Patch](http://en.wikipedia.org/wiki/Great_Pacific_Garbage_Patch). 
@@ -128,4 +127,4 @@ In order to achieve her task, Nelle needs to know how to:
 - iterate over files
 - run a shell script containing her pipeline
 
-{% include links.md %}
+[Back to Contents Page](shell.md)

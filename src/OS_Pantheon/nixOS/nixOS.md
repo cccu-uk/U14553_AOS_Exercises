@@ -2,7 +2,7 @@
 
 First you need to prepare the AArch64 image on your laptop:
 
-```bash
+```sh
 $ nix-shell -p wget zstd
 $ wget https://hydra.nixos.org/build/160738647/download/1/nixos-sd-image-22.05pre374583.cbe587c735b-aarch64-linux.img.zst
 $ unzstd -d nixos-sd-image-22.05pre374583.cbe587c735b-aarch64-linux.img.zst
@@ -19,7 +19,7 @@ Press ``ctrl-c`` to stop ``dmesg --follow``.
 
 Copy NixOS to your SD card by replacing ``sdX`` with the name of your device:
 
-```bash
+```sh
 $ sudo dd if=nixos-sd-image-22.05pre374583.cbe587c735b-aarch64-linux.img of=/dev/sdX bs=4096 conv=fsync status=progress
 ```
 
@@ -37,7 +37,7 @@ At this point we’ll need internet connection. If you can use an ethernet cable
 
 In case you’re connecting to a wifi run ``iwconfig`` to see what is the name of your wireless network interface. In case it’s ```wlan0``` replace ```SSID``` and ```passphrase``` with ```makerspace``` ```gkgV8jID`` your data and run:
 
-```bash
+```sh
 $ wpa_supplicant -B -i wlan0 -c <(wpa_passphrase 'SSID' 'passphrase') &
 ```
 
@@ -49,7 +49,7 @@ In case you've made a typo, run ``pkill wpa_supplicant`` and start over.
 
 To benefit from updates and bug fixes from the vendor, we will start by updating Raspberry Pi firmware:
 
-```bash
+```sh
 $ nix-shell -p raspberrypi-eeprom
 $ mount /dev/disk/by-label/FIRMWARE /mnt
 $ BOOTFS=/mnt FIRMWARE_RELEASE_STATUS=stable rpi-eeprom-update -d  
@@ -121,7 +121,7 @@ in {
 
 Of course if you have already read past the configuration above then you could always save some much needed time and do this in the terminal as ``su``:
 
-```bash
+```sh
 $ curl -L https://tinyurl.com/nixos-rpi4-tutorial > /etc/nixos/configuration.nix
 ```
 
@@ -129,7 +129,7 @@ At the top of ``/etc/nixos/configuration.nix`` there are a few variables that yo
 
 Once you're ready to deploy your first configuration file:
 
-```bash
+```sh
 $ nixos-install --root /
 $ reboot
 ```
@@ -171,7 +171,7 @@ services.xserver ={
 ``` 
 Now write out so we can redeploy our script live.
 
-```bash
+```sh
 $ sudo -i
 $ nixos-rebuild switch
 $ reboot
@@ -197,7 +197,7 @@ services.xserver = {
 
 Write out and enter redeploy and reboot with the following command:
 
-```bash
+```sh
 $ sudo nixos-rebuild switch && reboot
 ```
 
@@ -221,7 +221,7 @@ services.xserver = {
 
 Write out and enter redeploy and reboot with the following command:
 
-```bash
+```sh
 $ sudo nixos-rebuild switch && reboot
 ```
 
@@ -231,7 +231,7 @@ Now we should have a new display and desktop manager, how fun, however what you 
 
 If you open the terminal and run this command you should see a list of configurations files, notice that the lastest is current set to (current) this is so you know which generation you are running : 
 
-```bash
+```sh
 $ sudo nix-env --list-generations --profile /nix/var/nix/profiles/system
 ```
 
@@ -253,7 +253,7 @@ environment.systemPackages = with pkgs; [ vim git bat vscodium neofetch ];
 
 Write out and enter redeploy and reboot with the following command:
 
-```bash
+```sh
 $ sudo nixos-rebuild  && reboot
 ```
 

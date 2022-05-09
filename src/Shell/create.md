@@ -603,7 +603,7 @@ themselves. It is the shell, not the other programs, that deals with
 expanding wildcards.
 
 ### List filenames matching a pattern
-When run in the `proteins` directory, which `ls` command(s) will produce this output `ethane.pdb   methane.pdb` ?
+When run in the `proteins` directory, which `ls` command(s) will produce this output `ethane.pdb  methane.pdb` ?
 1. `ls *t*ane.pdb`
 >>
 2. `ls *t?ne.*`
@@ -845,4 +845,4 @@ the subdirectories.
 </details>
 
 ---
-{% include links.md %}
+[Back to Contents Page](shell.md)
