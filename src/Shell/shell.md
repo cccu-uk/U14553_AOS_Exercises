@@ -10,11 +10,7 @@ Use of the shell is fundamental to a wide range of advanced computing tasks, inc
 
 ## Installation 
 
----
-layout: page
-title: Setup
-root: .
----
+Click here to download the [shell-lesson-data](./shell-lesson-data.zip) for the exercises throughout understanding the Shell.
 
 ## Download files
 You need to download some files to follow this lesson.
