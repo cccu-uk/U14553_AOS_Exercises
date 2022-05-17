@@ -13,7 +13,6 @@ Click here to download the [shell-lesson-data](./shell-lesson-data.zip) for the 
 4. Once server has started <kbd>Right Click<kbd> File Browser view and create a new folder called `FCC`
 5. <kbd>Double Click</kbd> `FCC` and select the upload files icon to upload the `shell-lesson-data.zip`. Alternatively you can drag the `shell-lesson-data.zip` from your host machine to the file browser in jupyter hub to upload it. 
 6. Next select from the `Launcher` window the 'Terminal' icon to load a terminal. ![](.fig/../fig/jh-terminal-launch.png) 
-<https://swcarpentry.github.io/shell-novice/setup.html>
 7. Now you can navigate to the correct directory using the following commands, note we will be going over what these mean at a later date. 
    ```bash
    cd FCC

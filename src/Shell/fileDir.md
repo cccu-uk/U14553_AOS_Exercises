@@ -306,7 +306,7 @@ shell-lesson-data/
 
 Note that if a directory named `Desktop` does not exist in your current working directory, this command will return an error. Typically, a `Desktop` directory exists in your home directory, which we assume is the current working directory of your bash shell.
 
-Your output should be a list of all the files and sub-directories in your Desktop directory, including the `shell-lesson-data` directory you downloaded the [setup for this lesson]({{ page.root }}{% link setup.md %}).
+Your output should be a list of all the files and sub-directories in your Desktop directory, including the `shell-lesson-data` directory you downloaded the [setup for this lesson](./installation.md).
 
 On many systems, the command line Desktop directory is the same as your GUI Desktop.
 
@@ -715,6 +715,6 @@ goodiff.sh   goostats.sh
 
 This is called **tab completion**, and we will see it in many other tools as we go on.
 
-[Arguments](https://swcarpentry.github.io/shell-novice/reference.html#argument)
+[Arguments](./reference.md#argument)
 
 [Back to Contents Page](shell.md)
