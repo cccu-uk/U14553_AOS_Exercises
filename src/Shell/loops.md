@@ -712,4 +712,4 @@ Try running the code for yourself to see which directories are created!
 </details>
 
 ---
-{ include links.md %}
+[Back to Contents Page](shell.md)

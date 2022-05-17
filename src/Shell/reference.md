@@ -54,7 +54,7 @@ The following is an overview of a standard Unix filesystem. The exact hierarchy 
 #### file system
 - A set of files, directories, and I/O devices (such as keyboards and screens). A file system may be spread across many physical devices, or many file systems may be stored on a single physical device; the operating system manages access.
  
-**filename extension**
+#### filename extension
 - The portion of a file’s name that comes after the final `“.”` character. By convention this identifies the file’s type: `.txt` means “text file”, `.png` means “Portable Network Graphics file”, and so on. These conventions are not enforced by most operating systems: it is perfectly possible (but confusing!) to name an MP3 sound file homepage.html. Since many applications use filename extensions to identify the [MIME](#mime-type) type of the file, misnaming files may cause those applications to fail.
   
 #### filter
@@ -146,3 +146,5 @@ Software that manages interactions between users, hardware, and software [proces
 
 #### wildcard
 - A character used in pattern matching. In the Unix shell, the wildcard `*` matches zero or more characters, so that `*.txt` matches all files whose names end in `.txt`.
+
+[Back to Contents Page](shell.md)

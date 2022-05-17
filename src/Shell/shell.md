@@ -8,28 +8,16 @@ Use of the shell is fundamental to a wide range of advanced computing tasks, inc
 
 > If you’re already comfortable manipulating files and directories, searching for files with grep and find, and writing simple loops and scripts, you probably want to explore the next lesson: [Shell Extras](../Shell_Extras/introduction.md)
 
-## Installation 
 
-Click here to download the [shell-lesson-data](./shell-lesson-data.zip) for the exercises throughout understanding the Shell.
-
-## Download files
-You need to download some files to follow this lesson.
-
-1. Download [shell-lesson-data.zip][zip-file] and move the file to your Desktop.
-2. Unzip/extract the file.
-   **Let your instructor know if you need help with this step**.
-   You should end up with a new folder called **`shell-lesson-data`** on your Desktop.
-
-## Install software
-If you do not already have the shell software installed, you will need to [download and install][install_shell][zip-file]: {{ page.root }}/data/shell-lesson-data.zip
-
- ## Contents
+## Contents
 | Tutorial | Description |
-|    ---   |     ---     |   
-| 1. [Introducing the Shell](shell.md) | What is a command shell and why would I use one?| 
+|    ---   |     ---     |
+| 0. [Installation](installation.md) | Instruction on setting up the exercise environment.|
+| 1. [Introducing the Shell](shell.md) | What is a command shell and why would I use one?|
 | 2. [Navigating File and Directories](fileDir.md) | How can I move around on computer?<br> How can I see what files and directories I have?<br> How can I specify the location of a file or directory on my computer?|
 | 3. [Working with FIles and Directories](create.md)|How can I create, copy, and delete files and directories? <br>How can I edit files?|
 | 4. [Pipes and Filter](pipefilter.md)|How can I combine existing commands to do new things?|
 | 5. [Loops](loops.md)|How can I perform the same actions on many different files?|
 | 6. [Scripts](scripts.md)|How can I save and re-use commands?|
 | 7. [Finding Things](find.md)|How can I find files?<br>How can I find things in files?|
+|$. [reference](reference.md)| Summary of keywords and topics covered|

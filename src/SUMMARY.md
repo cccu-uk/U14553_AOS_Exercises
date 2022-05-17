@@ -3,9 +3,6 @@
 
 This book, will be continually updated with new documentation and labs for use in MCOMD3AOS.
 
-- [Shell Style Gudie](./MCOMD3AOS_Shell_Style_Guide/shellstyleguide.md)
-- [System Statistics Script](./MCOMD3AOS_systemStats_script/systemStats.md)
-- [RFC Logger Script](./MCOMD3AOS_RFC_Logger/rfclogger.md)
 - [Shell](./Shell/shell.md)
   - [Introducing the Shell](./Shell/introducing_shell.md)
   - [Navigating File and Directories](./Shell/fileDir.md)
@@ -15,7 +12,22 @@ This book, will be continually updated with new documentation and labs for use i
   - [Scripts](./Shell/scripts.md)
   - [Finding Things](./Shell/find.md)
   - [Summary of Basic Commands](./Shell/sumbasiccmds.md)
-- [Extra Shell](./extrashell.md)
-  
+- [Extra Shell](./Shell_Extras/introduction.md)
+  - [Manual Pages](./Shell_Extras/manfiles.md)
+  - [Working Remotely](./Shell_Extras/workremote.md)
+  - [Working with FIles and Directories](./Shell_Extras/)
+  - [Pipes and Filters](./Shell_Extras/)
+  - [Loop](./Shell_Extras/)
+  - [Scripts](./Shell_Extras/)
+  - [Finding Things](./Shell_Extras/)
+  - [Summary of Basic Commands](./Shell_Extras/)
+- [Shell Style Guide](./Shell_Style_Guide/shellstyleguide.md)
+- [System Statistics Script](./System_Statistics_Script/systemStats.md)
+- [RFC Logger Script](./RFC_Logger/rfclogger.md)
+- [OS Pantheon](./OS_Pantheon/Introduction.md)
+  - [NixOS](./OS_Pantheon/nixOS/nixOS.md)
+  - [Arch](./OS_Pantheon/arch/arch.md)
+  - [Raspberry Pi OS](./OS_Pantheon/RPIOS/rpios.md)
+  - [Windows Core IoT](./OS_Pantheon/WindowsCoreIoT/WindowsCoreIoT.md)  
   ----
   [Back to Contents Page](shell.md)

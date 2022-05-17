@@ -674,5 +674,4 @@ The raw files end in `.dat` and the processed files end in `.txt`. Which of the 
 </details>
 
 ---
-
-{% include links.md %}
+[Back to Contents Page](shell.md)
