@@ -4,6 +4,7 @@
 This book, will be continually updated with new documentation and labs for use in MCOMD3AOS.
 
 - [Shell](./Shell/shell.md)
+  - [Installation](./Shell/installation.md)
   - [Introducing the Shell](./Shell/introducing_shell.md)
   - [Navigating File and Directories](./Shell/fileDir.md)
   - [Working with FIles and Directories](./Shell/create.md)
