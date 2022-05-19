@@ -5,6 +5,11 @@ multilingual = false
 src = "src"
 title = "AOS_Exercises"
 
-[output.html.playground]
-editable = false
-line-numbers = true
+[output.html.search]
+limit-results = 20
+use-boolean-and = true
+boost-title = 2
+boost-hierarchy = 2
+boost-paragraph = 1
+expand = true
+heading-split-level = 2
