@@ -153,7 +153,7 @@ How would you write a loop that echoes all 10 numbers from 0 to 9?
 <summary><b>Click for Solution</b></summary>
 <p></p>
 
- ```sh
+ ```sh,editable
  $ for loop_variable in 0 1 2 3 4 5 6 7 8 9
  > do
  >     echo $loop_variable
