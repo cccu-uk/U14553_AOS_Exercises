@@ -6,5 +6,5 @@ src = "src"
 title = "AOS_Exercises"
 
 [output.html.playground]
-editable = true
+editable = false
 line-numbers = true
