@@ -37,8 +37,8 @@ c) CORES=$(cat /sys/devices/system/cpu/present)
 D) DISKSPACES=$(df -H  | grep -w 'overlay' | awk '{print "T: "$2 " U: "$3 " A: "$4}')
    echo -e "Disk Info="${DISKSPACES};;
 i) IP=$(hostname -I)
-   echo "Host IP="${IP};;	
-u) 
+   echo "Host IP="${IP};;
+u)
    tmp=$(grep -w 'cpu' /proc/stat)
    USAGE=$(${tmp}| awk '{(usage=($2+$3+$4+$6+$7+$8)*100/($2+$3+$4+$5+$6+$7+$8))}
                                            {free=($5)*100/($2+$3+$4+$5+$6+$7+$8)}

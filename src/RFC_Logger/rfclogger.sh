@@ -32,7 +32,7 @@ export DEF_LOG_FORMAT='%DATE %PID [%LEVEL] %MESSAGE'
 export DEF_LOG_DATE_FORMAT='+%F %T %Z'
 
 # Define LOG variables
-LOG_VARS() {
+LOG_VARS(){
     export LOG_LOGFILE_ENABLE=${LOG_LOGFILE_ENABLE:-1}  # Enable logging to file
     export LOGFILE=${LOGFILE:-"$HOME/tmp/bash-logger/my-bash-logger.log"}
     export LOG_FORMAT=${LOG_FORMAT:-$DEF_LOG_FORMAT}
@@ -82,7 +82,7 @@ FORMAT_LOG() {
     formatted_log="${formatted_log/'%MESSAGE'/$log}"
     formatted_log="${formatted_log/'%LEVEL'/$level}"
     formatted_log="${formatted_log/'%PID'/$pid}"
-    formatted_log="${formatted_log/'%DATE'/$date}" 
+    formatted_log="${formatted_log/'%DATE'/$date}"
     echo "$formatted_log"
 }
 
