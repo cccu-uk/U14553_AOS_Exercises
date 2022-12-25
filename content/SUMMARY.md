@@ -1,7 +1,6 @@
 # Summary
 
-
-This book, will be continually updated with new documentation and labs for use in MCOMD3AOS.
+# Bourne Again SHell
 
 - [Shell](./Shell/shell.md)
   - [Installation](./Shell/installation.md)
@@ -23,12 +22,29 @@ This book, will be continually updated with new documentation and labs for use i
   - [Shell Variables](./Shell_Extras/shellvars.md)
   - [Summary of Commands](./Shell_Extras/references.md)
 - [Shell Style Guide](./Shell_Style_Guide/shellstyleguide.md)
-- [System Statistics Script](./System_Statistics_Script/systemStats.md)
-- [RFC Logger Script](./RFC_Logger/rfclogger.md)
-- [OS Pantheon](./OS_Pantheon/Introduction.md)
-  - [NixOS](./OS_Pantheon/nixOS/nixOS.md)
-  - [Arch](./OS_Pantheon/arch/arch.md)
-  - [Raspberry Pi OS](./OS_Pantheon/RPIOS/rpios.md)
-  - [Windows Core IoT](./OS_Pantheon/WindowsCoreIoT/WindowsCoreIoT.md)  
+
+# In-class Exercises
+- [System Statistics Script]()
+- [RFC Logger Script]()
+- [Man page Example]()
+- [Scheduling]()
+- [Daemons]()
+
+# Git
+- [My First Repository](myFirstRepository/myFirstRepository.md)
+- [Branching-Strategy](BranchingModel/BranchingModel.md)
+- [Git Oneflow](OneFlow/OneFlow.md)
+- [Anti Patterns](AntiPatterns/AntiPatterns.md)
+- [Continous Deployment](ContinousDeployment/ContinousDeployment.md)
+- [Release Deployment](ReleaseDeployment/ReleaseDeployment.md)
+- [Migration](Migration/Migration.md)
+
+# Operating Systems/ Virtual Machines
+
+- [OS](./OS/Introduction.md)
+  - [NixOS](./OS/nixOS/nixOS.md)
+  - [Arch](./OS/arch/arch.md)
+  - [Raspberry Pi OS](./OS/RPIOS/rpios.md)
+  - [Windows Core IoT](./OS/WindowsCoreIoT/WindowsCoreIoT.md)
   ----
   [Back to Contents Page](shell.md)

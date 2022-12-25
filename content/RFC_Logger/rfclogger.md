@@ -6,20 +6,22 @@ In this lab you will implement the Internet Engineering Taskforce RFC 5424 stand
 >
 > Be prepared to see a more advanced level of bash scripting through this exercise, as this is a stage 6 module you are expected to learn at higher level.
 >
-> Also, this lab is essential for the first assignment.
+> Also, this lab is essential for the assignment.
 >
 > Once you have followed this document you will be provided with a file that you can then test the output of the script.
 
 # Getting Started 
 
-Open a terminal and make a directory in your `$HOME` directory and call it `AOS/` if you havent got one already,
-using the `mkdir AOS` command in the terminal in JupyterHub.
+Open a terminal and make a directory in your `$HOME` directory and call it `ACe/` if you havent got one already,
+using the `mkdir ACE` command in the terminal in JupyterHub.
 
-Next you will need to create a child directory inside `AOS` called `logging`.
+Next you will need to create a child directory inside `ACE` called `logging`.
 
-From here you can either navigate to this newly created child directory using `cd AOS/logging` if you are in the `$HOME` directory still.
+From here you can either navigate to this newly created child directory using `cd ACE/logging` if you are in the `$HOME` directory still.
 
 ![mkdir example](images/mkdir.png)
+
+> ***NOTE**: Remember you should be in `dev` branch.
 
 Now pick your favourite text editor(nano, vim, etc) or find an IDE installed on the system. Then create a new shell script like this `<editor> rfclogger.sh` where the `<editor>` is nano, vim, etc.
 
@@ -170,7 +172,7 @@ So again probably some new syntax and commands are standing out.
 
 -   `$@` expands into a list of separate parameters, where as `$*` is one  parameter consisting of all the parameters added together.
 
--   Hopefully you remember from other content you have learned at CCCU that `exit 0` and is explicit means no error, exit 1 is an error and is implicit.
+-   Hopefully you remember from other content you have learned at UoG that `exit 0` and is explicit means no error, exit 1 is an error and is implicit.
 
 # Helper Functions
 
@@ -432,3 +434,7 @@ LOG_RESET() {
 >
 > ![Caption](images/output.PNG)
 
+Download from here the files that we have built if you need too.
+
+- [rfclogger.sh](./rfclogger.sh)
+- [example.sh](./example)

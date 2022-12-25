@@ -1,21 +1,5 @@
 # The Unix Shell
 
-<table>
-<tr>
-<td>
-
-The mdBook accessed outside of blackboard and is mobile and tablet friendly. :
-- [https://github.com/cccu-uk/U14553_AOS_Labs](https://github.com/cccu-uk/U14553_AOS_Labs)
-- Or scan the QR code on the right:
-</td>
-<td>
-
-<a rel='nofollow' href='https://www.qr-code-generator.com' border='0' style='cursor:default'><img src='https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fcccu-uk.github.io%2FU14553_AOS_Labs%2FShell%2Fshell.html&chs=180x180&choe=UTF-8&chld=L|2' alt=''></a>
-
-</td>
-</tr>
-</table>
-
 The Unix shell has been around longer than most of its users have been alive. It has survived because it’s a powerful tool that allows users to perform complex and powerful tasks, often with just a few keystrokes or lines of code. It helps users automate repetitive tasks and easily combine smaller tasks into larger, more powerful workflows.
 
 Use of the shell is fundamental to a wide range of advanced computing tasks, including high-performance computing. These lessons will introduce you to this powerful tool.
