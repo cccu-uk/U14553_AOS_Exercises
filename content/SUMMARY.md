@@ -31,13 +31,13 @@
 - [Daemons]()
 
 # Git
-- [My First Repository](myFirstRepository/myFirstRepository.md)
-- [Branching-Strategy](BranchingModel/BranchingModel.md)
-- [Git Oneflow](OneFlow/OneFlow.md)
-- [Anti Patterns](AntiPatterns/AntiPatterns.md)
-- [Continous Deployment](ContinousDeployment/ContinousDeployment.md)
-- [Release Deployment](ReleaseDeployment/ReleaseDeployment.md)
-- [Migration](Migration/Migration.md)
+- [My First Repository](./myFirstRepository/myFirstRepository.md)
+- [Branching-Strategy](./BranchingModel/BranchingModel.md)
+- [Git Oneflow](./OneFlow/OneFlow.md)
+- [Anti Patterns](./AntiPatterns/AntiPatterns.md)
+- [Continous Deployment](./ContinousDeployment/ContinousDeployment.md)
+- [Release Deployment](./ReleaseDeployment/ReleaseDeployment.md)
+- [Migration](./Migration/Migration.md)
 
 # Operating Systems/ Virtual Machines
 
