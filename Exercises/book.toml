@@ -1,9 +1,17 @@
 [book]
-authors = ["CompEng0001"]
+authors = ["Seb Blair"]
+title = "AOS Exercises"
 language = "en"
 multilingual = false
-src = "src"
-title = "AOS Exercises"
+src = "content"
+
+[output.html]
+mathjax-support = true
+git-repository-url = "https://github.com/cccu-uk/U14553_AOS_Labs/"
+edit-url-template = "https://github.com/cccu-uk/U14553_AOS_Labs/edit/master/{path}"
+
+[output.html.print]
+enable = false 
 
 [output.html.search]
 limit-results = 20
@@ -12,4 +20,4 @@ boost-title = 2
 boost-hierarchy = 2
 boost-paragraph = 1
 expand = true
-heading-split-level = 2
+heading-split-level = 4
