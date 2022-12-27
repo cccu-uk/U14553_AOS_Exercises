@@ -1,14 +1,14 @@
 [book]
 authors = ["Seb Blair"]
-title = "AOS Exercises"
 language = "en"
 multilingual = false
-src = "content"
+src = "src"
+title = "AOS Exercises"
 
 [output.html]
 mathjax-support = true
-git-repository-url = "https://github.com/cccu-uk/U14553_AOS_Labs/"
-edit-url-template = "https://github.com/cccu-uk/U14553_AOS_Labs/edit/master/{path}"
+git-repository-url = "https://github.com/cccu-uk/U14553_AOS_Exercises/"
+edit-url-template = "https://github.com/cccu-uk/U14553_AOS_Exercises/edit/master/{path}"
 
 [output.html.print]
 enable = false 
