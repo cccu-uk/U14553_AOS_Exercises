@@ -1,13 +1,8 @@
 # Summary
-
-# Bourne Again SHell
-
 # Labs
 
 - [Multi-Threaded Scripting & Process Management](./Multi-ThreadedScripting-ProcessManagement/Multi-ThreadedScripting-ProcessManagement.md)
 
--------
-# Shell Stuff
 - [Shell](./Shell/shell.md)
   - [Installation](./Shell/installation.md)
   - [Introducing the Shell](./Shell/introducing_shell.md)
@@ -53,4 +48,3 @@
   - [Raspberry Pi OS](./OS/RPIOS/rpios.md)
   - [Windows Core IoT](./OS/WindowsCoreIoT/WindowsCoreIoT.md)
   ----
-  [Back to Contents Page](shell.md)
