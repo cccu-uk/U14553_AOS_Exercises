@@ -2,6 +2,12 @@
 
 # Bourne Again SHell
 
+# Labs
+
+- [Multi-Threaded Scripting & Process Management](./Multi-ThreadedScripting-ProcessManagement/Multi-ThreadedScripting-ProcessManagement.md)
+
+-------
+# Shell Stuff
 - [Shell](./Shell/shell.md)
   - [Installation](./Shell/installation.md)
   - [Introducing the Shell](./Shell/introducing_shell.md)
