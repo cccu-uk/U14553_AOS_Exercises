@@ -7,12 +7,12 @@ This mdBook will grow over the duration of this module with new labs/workshops a
 <td>
 
 The mdBook accessed outside of blackboard and is mobile and tablet friendly. :
-- [https://github.com/cccu-uk/U14553_AOS_Labs](https://github.com/cccu-uk/U14553_AOS_Labs)
+- [https://github.com/cccu-uk/U14553_AOS_Exercises](https://github.com/cccu-uk/U14553_AOS_Exercises)
 - Or scan the QR code on the right:
 </td>
 <td>
 
-<a rel='nofollow' href='https://www.qr-code-generator.com' border='0' style='cursor:default'><img src='https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fcccu-uk.github.io%2FU14553_AOS_Labs%2FShell%2Fshell.html&chs=180x180&choe=UTF-8&chld=L|2' alt=''></a>
+<a rel='nofollow' href='https://www.qr-code-generator.com' border='0' style='cursor:default'><img src='https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fcccu-uk.github.io/U14553_AOS_Exercises&chs=180x180&choe=UTF-8&chld=L|2' alt=''></a>
 
 </td>
 </tr>
