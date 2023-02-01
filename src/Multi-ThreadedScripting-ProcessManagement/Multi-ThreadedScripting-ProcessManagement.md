@@ -14,7 +14,7 @@ For example, does your computer have 2 CPU threads or more (many modern machines
 Some information related to the format of this lab:
 
 >**Important**
->> - Go to Jupyter Hub [https://jupyterhub-dev.canterbury.ac.uk/](https://jupyterhub-dev.canterbury.ac.uk/) and open a terminal.
+>> - Go to Jupyter Hub [https://jupyterhub.canterbury.ac.uk/hub/](https://jupyterhub.canterbury.ac.uk/hub/) and open a terminal.
 >> - or if you have your own linux CLI open one up.
 
 >> **Naming Conventions**
@@ -57,15 +57,15 @@ $
 
 </details>
 
-Run again but this time append `echo` with `$` you will see proof of this, your PIDs may differ.
+Run again but this time append `echo` with `$$` you will see proof of this, your PIDs may differ.
 
 ```sh
-$ echo $
+$ echo $$
 220250
 ```
 ```sh
 $ bash
-$ echo $
+$ echo $$
 222629
 ```
 ```sh
@@ -73,7 +73,7 @@ $ exit
 exit
 ```
 ```
-$ echo $
+$ echo $$
 220250
 ```
 
