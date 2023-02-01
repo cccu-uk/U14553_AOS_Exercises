@@ -1,7 +1,14 @@
 # Summary
-# Labs
+- [Introduction](Introduction.md)
 
-- [Multi-Threaded Scripting & Process Management](./Multi-ThreadedScripting-ProcessManagement/Multi-ThreadedScripting-ProcessManagement.md)
+--------
+# Labs
+- [System Statistics Script]()
+- [RFC Logger Script]()
+- [Man page Example]()
+- [Scheduling]()
+- [Daemons]()
+- [Multi-Threaded Scripting & Process Management]()
 
 -------
 # Shell Stuff
@@ -26,12 +33,7 @@
   - [Summary of Commands](./Shell_Extras/references.md)
 - [Shell Style Guide](./Shell_Style_Guide/shellstyleguide.md)
 
-# In-class Exercises
-- [System Statistics Script]()
-- [RFC Logger Script]()
-- [Man page Example]()
-- [Scheduling]()
-- [Daemons]()
+-----------
 
 # Git
 - [My First Repository](./myFirstRepository/myFirstRepository.md)
