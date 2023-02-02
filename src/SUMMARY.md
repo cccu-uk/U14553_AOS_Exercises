@@ -4,6 +4,7 @@
 --------
 # Labs
 - [Multi-Threaded Scripting & Process Management](./Multi-ThreadedScripting-ProcessManagement/Multi-ThreadedScripting-ProcessManagement.md)
+- [Learning C](./Learning_C/Learning_C.md)
 - [System Statistics Script]()
 - [RFC Logger Script]()
 - [Man page Example]()
