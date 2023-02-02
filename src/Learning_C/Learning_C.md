@@ -20,7 +20,7 @@ $  mkdir -p NOS/Learning_C
 Now you are to navigate to this directory using the following command and create your first file:
 
 ```
-$  cd NOS/Learning_C
+$  cd AOS/Learning_C
 $  touch helloworld.c
 ```
 > **Note:**
