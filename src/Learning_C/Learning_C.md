@@ -11,7 +11,7 @@ To do this you will need to open up Juypter hub and open a new terminal.
 Create a new directory and call it `AOS/Learning_C` we can do this using the following commands in terminal. 
 
 ```
-$  mkdir -p NOS/Learning_C
+$  mkdir -p AOS/Learning_C
 ```
 > **Note:**
 >> - the `$` symbol used in the above indicates that this is a command that should be entered into the terminal.
