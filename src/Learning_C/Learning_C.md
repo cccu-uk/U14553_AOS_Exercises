@@ -8,7 +8,7 @@ To do this you will need to open up Juypter hub and open a new terminal.
 
 >> [https://jupyterhub.canterbury.ac.uk/hub/spawn](https://jupyterhub.canterbury.ac.uk/hub/spawn)
 
-Create a new directory and call it `NOS/Learning_C` we can do this using the following commands in terminal. 
+Create a new directory and call it `AOS/Learning_C` we can do this using the following commands in terminal. 
 
 ```
 $  mkdir -p NOS/Learning_C
