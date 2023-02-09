@@ -10,8 +10,8 @@ In this Lab you are going to use `shell` commands and write some programs in `c`
 
  1. Open a terminal.
  
- 2. change directory to `NOS/Learning_C/`
-    - `$ cd NOS/Learning_C`
+ 2. change directory to `AOS/Learning_C/`
+    - `$ cd AOS/Learning_C`
  
  3. make a directory called SystemCalls and change direcory 
     - `$ mkdir SystemCalls && cd SystemCalls`
