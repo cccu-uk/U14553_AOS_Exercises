@@ -12,12 +12,12 @@ In this lab you will implement the Internet Engineering Taskforce RFC 5424 stand
 
 # Getting Started 
 
-Open a terminal and make a directory in your `$HOME` directory and call it `ACe/` if you havent got one already,
+Open a terminal and make a directory in your `$HOME` directory and call it `AOS/` if you havent got one already,
 using the `mkdir ACE` command in the terminal in JupyterHub.
 
-Next you will need to create a child directory inside `ACE` called `logging`.
+Next you will need to create a child directory inside `AOS` called `logging`.
 
-From here you can either navigate to this newly created child directory using `cd ACE/logging` if you are in the `$HOME` directory still.
+From here you can either navigate to this newly created child directory using `cd AOS/logging` if you are in the `$HOME` directory still.
 
 ![mkdir example](images/mkdir.png)
 
