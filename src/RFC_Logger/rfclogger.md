@@ -21,7 +21,6 @@ From here you can either navigate to this newly created child directory using `c
 
 ![mkdir example](images/mkdir.png)
 
-> ***NOTE**: Remember you should be in `dev` branch.
 
 Now pick your favourite text editor(nano, vim, etc) or find an IDE installed on the system. Then create a new shell script like this `<editor> rfclogger.sh` where the `<editor>` is nano, vim, etc.
 
