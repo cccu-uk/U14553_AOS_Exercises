@@ -7,10 +7,10 @@
 - [Learning C](./Learning_C/Learning_C.md)
 - [System Calls](./SystemCalls/SystemCalls.md)
 - [RFC Logger Script](./RFC_Logger/rfclogger.md)
+- [Daemons](./Daemons/daemons.sh)
 - [System Statistics Script]()
 - [Man page Example]()
 - [Scheduling]()
-- [Daemons]()
 
 -------
 # Shell Stuff
